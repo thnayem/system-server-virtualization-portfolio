@@ -2,7 +2,7 @@
 
 **System & Network Administrator | Multi-Vendor IT Infrastructure & Operations**
 
-A practical, documentation-first portfolio covering Windows Server, Ubuntu Server 24.04 LTS, VMware ESXi, virtualization, infrastructure operations, maintenance, security, performance tuning, and service hosting.
+A practical, documentation-first portfolio covering Windows Server, Ubuntu Server 24.04 LTS, RHEL 9, CentOS 8, VMware ESXi, virtualization, infrastructure operations, maintenance, security, performance tuning, and service hosting.
 
 > **Portfolio integrity:** This repository contains sanitized lab procedures, reusable configuration examples, checklists, and reference designs. Lab documentation is not a claim that every procedure was deployed in a production environment.
 
@@ -12,6 +12,7 @@ A practical, documentation-first portfolio covering Windows Server, Ubuntu Serve
 |---|---|
 | Windows Server | Installation, initial configuration, AD DS, DNS, DHCP, Group Policy, file services, patching, backup, monitoring and troubleshooting |
 | Ubuntu Server 24.04 LTS | Installation, users and permissions, SSH, networking, storage, services, web hosting, hardening, maintenance and performance tuning |
+| RHEL 9 / CentOS 8 | Linux system administration, package management, users and permissions, SSH, networking, services, storage, firewalld, SELinux and troubleshooting |
 | VMware ESXi | Hardware readiness, firmware/BIOS setup, hypervisor installation, management networking, datastores, vSwitches, VM deployment and lifecycle operations |
 
 ## Repository map
@@ -57,6 +58,7 @@ A practical, documentation-first portfolio covering Windows Server, Ubuntu Serve
 
 - Windows Server documentation covers the **Windows Server 2022** and **Windows Server 2025** release families. Choose the edition and build according to licensing and hardware/application compatibility.
 - Ubuntu documentation targets **Ubuntu Server 24.04 LTS**.
+- RHEL and CentOS references identify platform administration experience; verify lifecycle and support status before selecting a release for a new deployment.
 - VMware ESXi release and hardware compatibility must be checked against the current VMware/Broadcom Compatibility Guide before deployment. This repository avoids claiming compatibility for unspecified hardware.
 
 ## Disclaimer
