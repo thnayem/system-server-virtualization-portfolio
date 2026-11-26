@@ -55,7 +55,7 @@ A practical, documentation-first portfolio covering Windows Server, Ubuntu Serve
 
 ## Version notes
 
-- **Windows Server 2024 is not an official Microsoft product release name.** The Windows guide therefore covers the supported Windows Server 2022 and Windows Server 2025 release families. Choose the exact edition/build according to licensing and compatibility requirements.
+- Windows Server documentation covers the **Windows Server 2022** and **Windows Server 2025** release families. Choose the edition and build according to licensing and hardware/application compatibility.
 - Ubuntu documentation targets **Ubuntu Server 24.04 LTS**.
 - VMware ESXi release and hardware compatibility must be checked against the current VMware/Broadcom Compatibility Guide before deployment. This repository avoids claiming compatibility for unspecified hardware.
 
