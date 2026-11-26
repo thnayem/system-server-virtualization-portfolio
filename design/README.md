@@ -30,3 +30,7 @@
 
 ## Security boundaries
 Keep hypervisor management, out-of-band management, guest workloads and user access appropriately segmented. Apply least privilege and restrict management planes to authorized admin sources. A single-host lab is not highly available; clearly document this limitation.
+
+## Detailed infrastructure blueprint
+
+See [Storage, Memory and Network Design Blueprint](storage-memory-network-blueprint.md) for physical host planning, DIMM/RAM considerations, RAID/HBA and datastore planning, VLAN separation, BMC management and recovery order.
