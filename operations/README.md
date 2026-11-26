@@ -37,3 +37,7 @@
 5. Apply the smallest reversible fix; communicate status.
 6. Verify from a client perspective and monitor for recurrence.
 7. Record root cause, corrective action and preventive follow-up.
+
+## Backup and restore
+
+Use the [Backup and Restore Matrix](backup-and-restore-matrix.md) to document workload-specific protection, RPO/RTO, retention, recovery validation and restore-test evidence. Also see [Patching and Backup Runbook](patching-and-backup.md).
