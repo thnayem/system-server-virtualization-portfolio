@@ -47,3 +47,10 @@ esxcli hardware platform get
 
 ## Maintenance
 Use a maintenance window, evacuate workloads where possible, confirm backup and rollback, check release interoperability, patch using the supported lifecycle workflow, reboot if required, then validate host and guest services. Keep firmware/driver/ESXi combinations within vendor-supported baselines.
+
+## Hardware and out-of-band management
+
+- [Physical hardware preparation checklist](hardware-preparation-checklist.md)
+- [iDRAC, iLO and IPMI setup and operations](idrac-ilo-ipmi-out-of-band.md)
+
+Keep the BMC/iDRAC/iLO management plane separate from ESXi and guest networks. Restrict access to authorized administrators and document the recovery path.
