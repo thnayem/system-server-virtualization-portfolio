@@ -45,3 +45,10 @@ Use Microsoft Security Baselines appropriate to the server release. Disable unus
 
 ## Lab evidence to add
 Screenshots with sensitive details masked, installation choices, role configuration, test outputs, change record, validation and rollback notes. Never publish domain credentials, real public IPs or production names.
+
+## Additional administration runbooks
+
+- [Storage, memory, network and backup](storage-memory-network-backup.md)
+- [Network configuration and remote management](networking-and-remote-management.md)
+- [Installation and initial baseline](installation-and-baseline.md)
+- [Active Directory, DNS and DHCP](active-directory-dns-dhcp.md)
