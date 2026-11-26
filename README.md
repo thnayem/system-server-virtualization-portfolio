@@ -65,3 +65,15 @@ Examples are reference material for controlled labs. Review commands for your en
 
 ---
 Maintained by [Md. Tanvir Hossain](https://github.com/thnayem) · [LinkedIn](https://www.linkedin.com/in/thnayem/)
+
+## Infrastructure administration details
+
+The portfolio also includes dedicated references for **RAM and storage planning, Windows volume administration, Ubuntu LVM, network configuration, backup and restore, and out-of-band hardware management**.
+
+- [Windows storage, memory, network and backup](windows-server/storage-memory-network-backup.md)
+- [Windows networking and remote management](windows-server/networking-and-remote-management.md)
+- [Ubuntu storage, LVM, memory and backup](linux/ubuntu-24.04/storage-lvm-memory-backup.md)
+- [Ubuntu networking and remote management](linux/ubuntu-24.04/networking-and-remote-management.md)
+- [iDRAC, iLO and IPMI out-of-band management](vmware/esxi/idrac-ilo-ipmi-out-of-band.md)
+- [Storage, memory and network design blueprint](design/storage-memory-network-blueprint.md)
+- [Backup and restore matrix](operations/backup-and-restore-matrix.md)
