@@ -75,3 +75,10 @@ Place overrides in an appropriate sshd_config drop-in where supported. Test with
 
 ## Lab evidence
 Publish sanitized Netplan examples, service unit examples, shell output, benchmark methodology and troubleshooting case studies. Do not publish private keys, password hashes, tokens or real internal addresses.
+
+## Additional administration runbooks
+
+- [Storage, LVM, memory and backup](storage-lvm-memory-backup.md)
+- [Network configuration and remote management](networking-and-remote-management.md)
+- [Netplan static IP example](netplan-static-ip.example.yaml)
+- [Nginx site configuration example](nginx-site.example.conf)
