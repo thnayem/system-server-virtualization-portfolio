@@ -33,3 +33,7 @@ This catalogue describes service-VM design patterns. Deploy only services needed
 
 ## VM lifecycle
 Use templates only after patching and sanitizing them. Avoid cloning machine identities or domain membership incorrectly. Use snapshots only as short-lived change safety nets, not as backups. Monitor CPU ready, memory ballooning/swapping, datastore latency and capacity. Test application-consistent backup and restore.
+
+## Build documentation
+
+Use the [service VM build sheet](service-vm-build-sheet.md) for each new guest. Record vCPU, RAM, virtual disks, datastore, port group/VLAN, IP/DNS/NTP, backup policy, monitoring and recovery priority.
