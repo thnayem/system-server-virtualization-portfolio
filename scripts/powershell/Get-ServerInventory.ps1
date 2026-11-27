@@ -23,7 +23,7 @@ Get-Volume |
                   @{Name="SizeGB";Expression={[math]::Round($_.Size / 1GB, 2)}},
                   @{Name="FreeGB";Expression={[math]::Round($_.SizeRemaining / 1GB, 2)}}
 
-Write-Host "`n=== Failed services ===" -ForegroundColor Cyan
+Write-Host "`n=== Stopped services (first 30) ===" -ForegroundColor Cyan
 Get-Service |
     Where-Object Status -eq "Stopped" |
     Select-Object -First 30 Name, DisplayName, Status
