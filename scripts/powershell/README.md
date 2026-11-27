@@ -1,25 +1,38 @@
 # PowerShell Administration Examples
 
-Run in an elevated PowerShell session only when required. Review each command and test in a lab before production use.
+The script in this folder collects a basic Windows Server inventory. It is read-only: it does not install roles, change services or modify network settings.
+
+- [Get-ServerInventory.ps1](Get-ServerInventory.ps1)
+
+Run it from a standard PowerShell session:
+
+```powershell
+.\Get-ServerInventory.ps1
+```
+
+The commands below are useful when checking one area at a time.
 
 ## Basic inventory
+
 ```powershell
 Get-ComputerInfo | Select-Object CsName, WindowsProductName, WindowsVersion, OsBuildNumber
 Get-NetAdapter | Format-Table Name, Status, LinkSpeed
 Get-Volume | Format-Table DriveLetter, FileSystemLabel, Size, SizeRemaining
-Get-Service | Where-Object Status -eq 'Running'
 ```
 
 ## Recent critical system events
+
 ```powershell
 Get-WinEvent -FilterHashtable @{LogName='System'; Level=1,2; StartTime=(Get-Date).AddDays(-1)} -MaxEvents 100 |
   Select-Object TimeCreated, Id, ProviderName, Message
 ```
 
 ## Updates and roles
-Use Windows Update / approved enterprise patch management. For Server Manager role inventory:
+
+Use Windows Update or the organization's approved patch-management process. To list installed Server Manager roles:
+
 ```powershell
 Get-WindowsFeature | Where-Object InstallState -eq 'Installed'
 ```
 
-Do not include passwords, tokens or environment-specific secrets in scripts or Git history.
+Review output before sharing it. Hostnames, IP details and event messages may reveal information about an environment.
