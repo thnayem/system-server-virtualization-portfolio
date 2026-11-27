@@ -34,3 +34,7 @@ Keep hypervisor management, out-of-band management, guest workloads and user acc
 ## Detailed infrastructure blueprint
 
 See [Storage, Memory and Network Design Blueprint](storage-memory-network-blueprint.md) for physical host planning, DIMM/RAM considerations, RAID/HBA and datastore planning, VLAN separation, BMC management and recovery order.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
