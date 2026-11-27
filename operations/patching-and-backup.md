@@ -23,3 +23,7 @@
 
 ## Restore test record
 Record system, restore point, recovery method, start/end time, data integrity checks, application validation, actual recovery time, issues and corrective actions.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
