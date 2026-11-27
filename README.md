@@ -19,6 +19,8 @@ A practical, documentation-first portfolio covering Windows Server, Ubuntu Serve
 
 - [Windows Server](windows-server/README.md)
 - [Ubuntu Server 24.04 LTS](linux/ubuntu-24.04/README.md)
+- [Red Hat Enterprise Linux 9](linux/rhel-9/README.md)
+- [CentOS Linux 8 (legacy / EOL)](linux/centos-8/README.md)
 - [VMware ESXi and hardware setup](vmware/esxi/README.md)
 - [Virtual machines for infrastructure services](vmware/virtual-machines/README.md)
 - [PowerShell examples](scripts/powershell/README.md)
