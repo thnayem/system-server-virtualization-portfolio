@@ -82,3 +82,7 @@ Publish sanitized Netplan examples, service unit examples, shell output, benchma
 - [Network configuration and remote management](networking-and-remote-management.md)
 - [Netplan static IP example](netplan-static-ip.example.yaml)
 - [Nginx site configuration example](nginx-site.example.conf)
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
