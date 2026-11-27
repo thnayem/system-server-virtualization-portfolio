@@ -1,40 +1,29 @@
 # System & Server Administration Portfolio
 
-**System & Network Administrator | Multi-Vendor IT Infrastructure & Operations**
+**Md. Tanvir Hossain**  
+System & Network Administrator | IT Infrastructure & Operations
 
-A documentation-first portfolio covering Windows Server, Ubuntu Server 24.04 LTS, RHEL 9, CentOS 8, VMware ESXi, virtualization, storage, backup, maintenance, security and service hosting.
+This repository contains notes and examples from the system administration side of my work: Windows Server, Linux, VMware, virtual machines, storage, backup, maintenance and troubleshooting.
 
-## Important context: production experience vs. published material
+I have supported and maintained live production servers and infrastructure, but this repository is not a copy of those environments. Company configurations, server backups, credentials, private hostnames and internal network details do not belong in a public repository. What I share here is a mix of study notes, sanitized references, independent lab examples and lessons from practical work. A lab procedure should not be read as proof that the same procedure was deployed unchanged in production.
 
-My hands-on experience supporting and maintaining live production servers and infrastructure extends well beyond the material currently published here. This repository is a small, selected glimpse of that work and learning, not a complete record of every server, platform, implementation, incident or operational responsibility I have handled. There is more experience and documentation I have not yet added.
+I am still learning different platforms and releases. If a command does not work as expected, I check the version, read the relevant documentation, test a safer approach and record what I find. I would rather be clear about what I have tested than label every example as verified.
 
-I do not publish original employer/customer production configurations, server backups, credentials, private hostnames, internal addressing or confidential documents. The pages here are study and learning notes, independently prepared examples, lab/demo exercises, troubleshooting write-ups, implementation practice and selected operational lessons. Any production involvement is described separately without exposing confidential details. A lab procedure or sample configuration is not a claim that the exact steps or configuration were deployed unchanged in production.
+## What is covered
 
-I am not claiming to be error-free or to know every platform in depth. If I make a mistake, I want to acknowledge it, take responsibility, investigate the cause, communicate clearly, fix what I can and document the lesson. Reliability also means knowing when to verify, ask for help and avoid making an unreviewed change to a critical service.
-
-
-## Five-minute overview
-
-- **Systems:** Windows Server, Linux administration, VMware ESXi and virtual machine operations.
-- **Infrastructure tasks:** Installation, configuration, patching, storage, networking, backup/restore, monitoring and troubleshooting.
-- **Operational approach:** Understand service impact, check evidence and dependencies, plan changes, prepare recovery and validate the service after work.
-- **Learning approach:** Use labs to test procedures, consult platform documentation, troubleshoot unexpected results and record what worked. Lab examples are not represented as production deployments.
-
-## Platforms
-
-| Platform | Coverage |
+| Platform | Topics |
 |---|---|
 | Windows Server | Installation, AD DS, DNS, DHCP, Group Policy, file services, patching, backup and troubleshooting |
 | Ubuntu Server 24.04 LTS | Users, permissions, SSH, networking, storage, services, hosting, hardening and performance |
-| RHEL 9 / CentOS 8 | Package management, users, SSH, networking, services, storage, firewalld, SELinux and troubleshooting |
-| VMware ESXi | Hardware readiness, hypervisor installation, management networking, datastores, vSwitches, VM deployment and lifecycle |
+| RHEL 9 / CentOS 8 | Packages, users, SSH, networking, services, storage, firewalld, SELinux and troubleshooting |
+| VMware ESXi | Hardware readiness, hypervisor installation, management networking, datastores, vSwitches and VM lifecycle |
 
 ## Repository map
 
 - [Windows Server](windows-server/README.md)
 - [Ubuntu Server 24.04 LTS](linux/ubuntu-24.04/README.md)
 - [Red Hat Enterprise Linux 9](linux/rhel-9/README.md)
-- [CentOS Linux 8 (legacy / EOL)](linux/centos-8/README.md)
+- [CentOS Linux 8 - legacy/EOL](linux/centos-8/README.md)
 - [VMware ESXi and hardware setup](vmware/esxi/README.md)
 - [Virtual machines for infrastructure services](vmware/virtual-machines/README.md)
 - [PowerShell examples](scripts/powershell/README.md)
@@ -43,7 +32,7 @@ I am not claiming to be error-free or to know every platform in depth. If I make
 - [Infrastructure design references](design/README.md)
 - [Server operations case studies](case-studies/README.md)
 
-## Lab architecture
+## A look at the lab layout
 
 ```text
                  Admin workstation
@@ -61,46 +50,44 @@ I am not claiming to be error-free or to know every platform in depth. If I make
                         Backup/Utility)
 ```
 
-## How to read the material
+## How I separate the material
 
-- **Production experience:** Describes areas of work I have been involved in, without disclosing employer or customer details.
-- **Sanitized reference:** A reduced configuration or procedure with sensitive information removed.
-- **Lab/demo:** An independently tested learning example. It is not evidence of production deployment.
-- **Design note:** Explains architecture, dependencies and trade-offs.
-- **Verification note:** Lists checks, expected results and recovery considerations.
+- **Production experience:** A high-level description of work I have been involved in, without company or customer details.
+- **Sanitized reference:** A reduced procedure or configuration with sensitive information removed.
+- **Lab/demo:** An independent example used to learn or demonstrate a task.
+- **Design note:** An explanation of architecture, dependencies and trade-offs.
+- **Verification note:** Checks and expected results. The platform and release should be stated when a test has actually been performed.
 
-A lab result should identify the platform/release and what was actually tested. If a command or workflow has not been tested on the stated version, it should be labelled as a reference for review rather than a verified procedure.
+## How I approach server work
 
-## Working principles
+Before installing or changing a server, I look at what it will run and what it depends on. That includes compute, memory, storage, network, DNS, time synchronization, access and backup. I try to use separate administrative access, keep systems patched and monitor capacity and service health.
 
-1. Plan compute, memory, storage, network and recovery before installation.
-2. Use documented management addressing, DNS and NTP settings.
-3. Apply least privilege and separate administrative accounts.
-4. Patch hosts and guests using a controlled maintenance window.
-5. Monitor capacity, service health, logs, backups and hardware alerts.
-6. Test restore procedures; a successful backup job alone is not proof of recoverability.
-7. Sanitize hostnames, IP addresses, credentials, serial numbers and organization details before publishing.
+For troubleshooting, I start with the symptom and its impact. Then I check recent changes, logs, monitoring, resource usage and dependencies. The fault may be in the hardware, hypervisor, guest OS, storage, network, identity service or application, so I try to isolate it before changing anything.
 
-## Troubleshooting approach
+After a fix, I check the service from the user's point of view. For backup work, I also want to know whether a restore has been tested. A successful backup job by itself does not prove that recovery will work.
 
-I start with the user-visible symptom and service impact. Then I check recent changes, monitoring, logs, capacity and dependencies. I narrow the fault to hardware, hypervisor, guest OS, storage, network, identity or application before making a change. After recovery, I verify the service from the user's perspective and record the cause, actions and follow-up.
+See the [server operations case studies](case-studies/README.md) for example workflows covering VM availability, Linux capacity, SMB access and restore readiness.
 
-See [server operations case studies](case-studies/README.md) for example workflows covering VM service availability, Linux capacity, SMB access and restore readiness.
+## Things I try to keep in mind
 
-## Documentation standard
+1. Plan CPU, memory, storage, network and recovery before installation.
+2. Document management addressing, DNS and NTP settings.
+3. Use least privilege and separate administrative accounts.
+4. Patch hosts and guests in a planned maintenance window.
+5. Keep an eye on capacity, service health, logs, backups and hardware alerts.
+6. Test restore procedures, not just backup jobs.
+7. Remove hostnames, IP addresses, credentials, serial numbers and organization details before publishing.
 
-New and updated technical pages follow [DOCUMENTATION-GUIDE.md](./DOCUMENTATION-GUIDE.md): purpose, evidence type, architecture, commands/configuration, explanation, troubleshooting, verification, rollback and lessons learned.
+## Version notes
 
-## Version and lifecycle notes
+- Windows Server pages cover the 2022 and 2025 release families. Check edition, build, licensing and application compatibility.
+- Ubuntu pages target Ubuntu Server 24.04 LTS.
+- RHEL and CentOS instructions depend on the release and support lifecycle.
+- CentOS 8 is end-of-life and should not be selected for a new production deployment.
+- Check VMware hardware and release compatibility before installation.
 
-- Windows Server documentation covers the 2022 and 2025 release families. Select edition/build according to licensing and application compatibility.
-- Ubuntu documentation targets Ubuntu Server 24.04 LTS.
-- RHEL and CentOS references identify platform administration topics. Check lifecycle and support status before selecting a release for a new deployment.
-- CentOS 8 is legacy/EOL; do not treat it as a recommended new production platform.
-- VMware hardware and release compatibility must be checked against the relevant compatibility guide.
+## Before using an example
 
-## Disclaimer
-
-Examples are reference material for controlled labs or sanitized documentation. Review commands for your environment before execution. Do not publish production credentials, private keys, public IPs, internal domain names, customer data or confidential topology details.
+These pages are references for controlled labs or sanitized documentation. Review commands for your own environment before running them. Do not publish production credentials, private keys, public IPs, internal domain names, customer data or confidential topology.
 
 Maintained by [Md. Tanvir Hossain](https://github.com/thnayem) · [LinkedIn](https://www.linkedin.com/in/thnayem/)
