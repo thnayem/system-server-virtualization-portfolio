@@ -1,30 +1,31 @@
-# Documentation Guide - Systems and Virtualization
+# How I document server and virtualization work
 
-Use this structure for Windows, Linux, VMware, storage, backup and server operations pages.
+I use these notes for Windows, Linux, VMware, storage, backup and server operations. The aim is simple: someone reading a page should understand the environment, know what the commands do and see what has actually been checked.
 
-## Evidence labels
+## Say what the material is
 
-- **Production experience:** A description of work I have been involved in, without confidential details.
-- **Sanitized reference:** A reduced/anonymized configuration or procedure.
-- **Lab/demo:** An independently authored example. State the OS/hypervisor release and what was actually tested.
-- **Design note:** Explains architecture, dependencies and trade-offs.
-- **Template:** A reusable checklist, not a completed production record.
+- **Production experience:** Work I have been involved in, described without company or customer details.
+- **Sanitized reference:** A shortened or anonymized procedure or configuration.
+- **Lab/demo:** An example I prepared separately. Include the OS or hypervisor release and say which parts were tested.
+- **Design note:** An explanation of the setup and its dependencies.
+- **Template:** A checklist to adapt, not a record of completed production work.
 
-Keep production experience separate from lab evidence.
+Do not describe a lab as a production deployment. Do not claim a restore or compatibility test unless it was carried out.
 
-## Page structure
+## What to put in a page
 
-1. **Purpose and scope** - Service, platform and issue being covered.
-2. **Environment** - OS/build, hypervisor/version, hardware assumptions and evidence label.
-3. **Architecture** - Mermaid diagram showing host, network, storage, VM and service dependencies when useful.
-4. **Prerequisites** - Access, backup, maintenance window, dependencies and permissions.
-5. **Commands/configuration** - PowerShell, Bash, config snippets or UI steps with placeholders.
-6. **Explanation** - What each important command changes and why.
-7. **Troubleshooting** - Symptoms, logs, checks, likely causes and safe actions.
-8. **Verification** - Expected service state, ports, logs, monitoring and user-side test.
-9. **Rollback/recovery** - Restore point, reversal steps, data safety and escalation.
-10. **What I learned** - Unexpected result, limitation, mistake corrected or next experiment.
-11. **References** - Vendor documentation and related pages.
+Use the sections that help explain the subject. A short, accurate note is better than filling every heading with generic advice.
+
+1. What service, platform or problem is this about?
+2. Which OS/build, hypervisor version or hardware assumptions apply?
+3. How do the host, network, storage, VM and application depend on one another?
+4. What access, backup, approval or maintenance window is needed?
+5. Which commands or UI steps are involved?
+6. What do the important commands change?
+7. What symptoms and logs help narrow down a fault?
+8. How was the result checked, including from the user's side?
+9. What is the recovery or rollback path?
+10. Which vendor references or related notes are useful?
 
 ## Example architecture
 
@@ -40,19 +41,19 @@ flowchart TD
   Linux --> Users
 ```
 
-## Troubleshooting record
+Change the diagram to match the system being described. Do not add components that are not part of the example.
 
-| Symptom | Evidence to collect | Possible layer | Verification |
+## Example troubleshooting notes
+
+| Symptom | What I would check | Possible area | How to verify |
 |---|---|---|---|
-| VM powered on, service unavailable | VM events, guest logs, listening ports, vNIC and VLAN | Application/guest/network/hypervisor | Test service from client side |
-| Filesystem full | `df -hT`, `df -i`, `du`, logs, LVM state | Filesystem/storage/application | Capacity and application write test |
-| SMB share inaccessible | DNS, TCP 445, SMB client/server logs, share and NTFS permissions | Network/authentication/SMB | Test with an authorized account |
-| Restore uncertain | Backup point, dependencies, isolated restore logs | Backup/recovery/application | Boot, data and service-owner validation |
+| VM is on, but service is unavailable | VM events, guest logs, listening ports, vNIC and VLAN | Application, guest, network or hypervisor | Test the service from a client |
+| Filesystem is full | `df -hT`, `df -i`, logs, LVM state and large directories | Filesystem, storage or application | Check free capacity and application writes |
+| SMB share cannot be opened | DNS, TCP 445, SMB logs, share and NTFS permissions | Network, authentication or SMB | Test with an authorized account |
+| Restore is uncertain | Backup point, dependencies and isolated restore logs | Backup, recovery or application | Boot, check data and confirm the service |
 
-## Safe command examples
+## Before running or sharing a command
 
-Use placeholders and explain the impact. Commands that alter partitions, filesystems, firewall policy, permissions, services or storage must include pre-checks and a recovery plan. Do not recommend disabling security controls as a first troubleshooting step.
+Commands that change partitions, filesystems, firewall rules, permissions, services or storage need pre-checks and a recovery plan. Do not suggest turning off security controls as the first troubleshooting step.
 
-## Publication rules
-
-Never publish passwords, private keys, recovery codes, real internal hostnames/IPs, serial numbers, user data or employer logs. Mark untested commands as reference examples. Do not claim a successful restore or hardware compatibility test unless it was actually performed.
+Keep passwords, private keys, recovery codes, internal hostnames/IPs, serial numbers, user data and employer logs out of public pages. If an example has not been tested, say so.
