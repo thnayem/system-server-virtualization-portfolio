@@ -71,3 +71,7 @@ Keep BMC, hypervisor management, guest workloads, storage and backup traffic sep
 4. Restore identity and core network services.
 5. Restore application services and user workloads.
 6. Validate from a client and document the recovery time.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
