@@ -80,3 +80,7 @@ Do not treat a VM snapshot, RAID mirror or successful backup status as proof of 
 ## 5. Operational notes
 
 Document disk layout, volume labels, NIC mapping, IP plan, memory baseline, backup policy, restore result and any performance changes. Mask serial numbers, asset tags, MAC addresses and internal addressing before publishing screenshots.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
