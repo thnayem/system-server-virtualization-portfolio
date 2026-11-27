@@ -4,6 +4,15 @@
 
 A documentation-first portfolio covering Windows Server, Ubuntu Server 24.04 LTS, RHEL 9, CentOS 8, VMware ESXi, virtualization, storage, backup, maintenance, security and service hosting.
 
+## Important context: production experience vs. published material
+
+My hands-on experience supporting and maintaining live production servers and infrastructure extends well beyond the material currently published here. This repository is a small, selected glimpse of that work and learning, not a complete record of every server, platform, implementation, incident or operational responsibility I have handled. There is more experience and documentation I have not yet added.
+
+I do not publish original employer/customer production configurations, server backups, credentials, private hostnames, internal addressing or confidential documents. The pages here are study and learning notes, independently prepared examples, lab/demo exercises, troubleshooting write-ups, implementation practice and selected operational lessons. Any production involvement is described separately without exposing confidential details. A lab procedure or sample configuration is not a claim that the exact steps or configuration were deployed unchanged in production.
+
+I am not claiming to be error-free or to know every platform in depth. If I make a mistake, I want to acknowledge it, take responsibility, investigate the cause, communicate clearly, fix what I can and document the lesson. Reliability also means knowing when to verify, ask for help and avoid making an unreviewed change to a critical service.
+
+
 ## Five-minute overview
 
 - **Systems:** Windows Server, Linux administration, VMware ESXi and virtual machine operations.
