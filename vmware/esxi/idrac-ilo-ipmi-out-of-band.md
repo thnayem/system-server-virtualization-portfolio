@@ -58,3 +58,7 @@ Power operations are intentionally not included as copy/paste commands. A remote
 ## Troubleshooting
 
 If the BMC is unreachable, check physical link, switch VLAN, IP/subnet/gateway, duplicate IP, ACL/firewall, DNS and BMC health. If the web UI is unavailable but ping works, test HTTPS and review firmware/browser compatibility. Use the server's physical console or vendor-approved recovery procedure if the controller itself is unresponsive.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
