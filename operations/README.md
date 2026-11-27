@@ -41,3 +41,7 @@
 ## Backup and restore
 
 Use the [Backup and Restore Matrix](backup-and-restore-matrix.md) to document workload-specific protection, RPO/RTO, retention, recovery validation and restore-test evidence. Also see [Patching and Backup Runbook](patching-and-backup.md).
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
