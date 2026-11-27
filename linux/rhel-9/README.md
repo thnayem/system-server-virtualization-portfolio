@@ -112,3 +112,7 @@ Plan capacity and filesystem growth carefully. Confirm backups, free extents, fi
 ## Validation boundary
 
 These are generic administration references, not a record of a specific production change. Validate command options and service behavior against the exact RHEL 9 minor release and organizational standards. Never publish subscription credentials, activation keys, private keys, internal hostnames, or unredacted configuration.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
