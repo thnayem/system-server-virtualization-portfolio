@@ -1,15 +1,15 @@
-# System & Server Administration Portfolio
+# System & Server Virtualization Portfolio
 
 **Md. Tanvir Hossain**  
-System & Network Administrator | IT Infrastructure & Operations
+System Administration | Windows & Linux | Virtualization
 
-This is where I keep notes from the server side of my work and learning: Windows Server, Linux, VMware, virtual machines, storage, backup, maintenance and troubleshooting. Some pages started because I needed to understand a problem at work; others came from lab practice or reading and testing something new.
+This is where I keep notes about the server side of my work and the things I am learning: Windows Server, Linux, VMware, virtual machines, storage, backup, maintenance and troubleshooting.
 
-I have supported and maintained live production servers and infrastructure, but this repository is not a copy of those environments. Company configurations, server backups, credentials, private hostnames and internal network details do not belong in a public repository. What I share is a mix of study notes, sanitized references, independent lab examples and lessons from practical work. A lab procedure should not be read as proof that the same procedure was deployed unchanged in production.
+I have worked with live production servers and infrastructure, but I do not publish copies of those environments. Company hostnames, IP plans, backups, credentials and internal details need to stay private. The pages here are a mixture of practical notes, sanitized references and independent lab examples. Where something is a lab exercise, I say so.
 
-I am still learning different platforms and releases. A command can fail because the version is different, a dependency is missing or I have misunderstood the setup. When that happens, I go back to the logs and documentation, test a safer approach and keep the useful lesson. I would rather be clear about what I have tested than label every example as verified.
+Some of these notes started with a problem I needed to understand. Others came from building a lab or reading about a feature I had not used before. I keep the useful commands and checks so I can return to them later. If a step has not been tested on the stated platform, I do not describe it as verified.
 
-## What this repository covers
+## What I cover
 
 | Platform | Topics |
 |---|---|
@@ -18,7 +18,7 @@ I am still learning different platforms and releases. A command can fail because
 | RHEL 9 / CentOS 8 | Packages, users, SSH, networking, services, storage, firewalld, SELinux and troubleshooting |
 | VMware ESXi | Hardware readiness, hypervisor installation, management networking, datastores, vSwitches and VM lifecycle |
 
-## Repository guide
+## Browse the repository
 
 - [Windows Server](windows-server/README.md)
 - [Ubuntu Server 24.04 LTS](linux/ubuntu-24.04/README.md)
@@ -32,7 +32,7 @@ I am still learning different platforms and releases. A command can fail because
 - [Infrastructure design references](design/README.md)
 - [Server operations case studies](case-studies/README.md)
 
-## Example lab layout
+## A simple lab layout
 
 ```text
                  Admin workstation
@@ -50,45 +50,25 @@ I am still learning different platforms and releases. A command can fail because
                         Backup/Utility)
 ```
 
-## How I separate the material
-
-- **Production experience:** A high-level description of work I have been involved in, without company or customer details.
-- **Sanitized reference:** A reduced procedure or configuration with sensitive information removed.
-- **Lab/demo:** An independent example used to learn or demonstrate a task.
-- **Design note:** An explanation of architecture, dependencies and trade-offs.
-- **Verification note:** Checks and expected results. The platform and release should be stated when a test has actually been performed.
-
 ## How I approach server work
 
-Before installing or changing a server, I look at what it will run and what it depends on. That includes compute, memory, storage, network, DNS, time synchronization, access and backup. I try to use separate administrative access, keep systems patched and monitor capacity and service health.
+Before installing or changing a server, I check what it needs to run: compute, memory, storage, network, DNS, time synchronization, access and backup. I also look at how it will be monitored and how it can be recovered if something goes wrong.
 
-For troubleshooting, I start with the symptom and its impact. Then I check recent changes, logs, monitoring, resource usage and dependencies. The fault may be in the hardware, hypervisor, guest OS, storage, network, identity service or application, so I try to isolate it before changing anything.
+When troubleshooting, I start with the reported symptom and recent changes. Then I check logs, service status, resource usage and dependencies. The cause may be in the hardware, hypervisor, guest OS, storage, network, identity service or application, so I try to isolate it before changing several things at once.
 
-After a fix, I check the service from the user's point of view. For backup work, I also want to know whether a restore has been tested. A successful backup job by itself does not prove that recovery will work.
-
-See the [server operations case studies](case-studies/README.md) for example workflows covering VM availability, Linux capacity, SMB access and restore readiness.
-
-## Things I try to keep in mind
-
-1. Plan CPU, memory, storage, network and recovery before installation.
-2. Document management addressing, DNS and NTP settings.
-3. Use least privilege and separate administrative accounts.
-4. Patch hosts and guests in a planned maintenance window.
-5. Keep an eye on capacity, service health, logs, backups and hardware alerts.
-6. Test restore procedures, not just backup jobs.
-7. Remove hostnames, IP addresses, credentials, serial numbers and organization details before publishing.
+After a fix, I check the service from the user's point of view. For backup work, I want to know whether a restore has actually been tested. A completed backup job is useful, but it does not prove that recovery will work.
 
 ## Version notes
 
 - Windows Server pages cover the 2022 and 2025 release families. Check edition, build, licensing and application compatibility.
 - Ubuntu pages target Ubuntu Server 24.04 LTS.
 - RHEL and CentOS instructions depend on the release and support lifecycle.
-- CentOS 8 is end-of-life and should not be selected for a new production deployment.
+- CentOS 8 is end-of-life. It should not be selected for a new production deployment.
 - Check VMware hardware and release compatibility before installation.
 
 ## Before using an example
 
-These pages are references for controlled labs or sanitized documentation. Review commands for your own environment before running them. Do not publish production credentials, private keys, public IPs, internal domain names, customer data or confidential topology.
+The scripts and configuration examples are starting points for learning and controlled testing. Review them before running anything, especially in a production environment. The inventory scripts are read-only, but their output may still contain host or network details, so check it before sharing.
 
 ## Related portfolios
 
