@@ -98,3 +98,7 @@ Investigate SELinux denials and correct labels or policy where appropriate. Chec
 ## Validation boundary
 
 This is a legacy administration and migration reference. It does not claim that the commands or procedures were executed on a particular production server. Validate against the exact host state and maintain a supported security baseline.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
