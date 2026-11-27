@@ -29,3 +29,7 @@ A backup design is only complete when the restore process has been tested and th
 6. Update the runbook if the procedure was incomplete.
 
 Keep at least one backup copy outside the normal administrator access path. A backup repository that can be deleted by a compromised domain administrator is not an adequate last line of defence.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
