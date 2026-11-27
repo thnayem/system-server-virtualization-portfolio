@@ -9,7 +9,7 @@ I have supported and maintained live production servers and infrastructure, but 
 
 I am still learning different platforms and releases. If a command does not work as expected, I check the version, read the relevant documentation, test a safer approach and record what I find. I would rather be clear about what I have tested than label every example as verified.
 
-## What is covered
+## What this repository covers
 
 | Platform | Topics |
 |---|---|
@@ -18,7 +18,7 @@ I am still learning different platforms and releases. If a command does not work
 | RHEL 9 / CentOS 8 | Packages, users, SSH, networking, services, storage, firewalld, SELinux and troubleshooting |
 | VMware ESXi | Hardware readiness, hypervisor installation, management networking, datastores, vSwitches and VM lifecycle |
 
-## Repository map
+## Repository guide
 
 - [Windows Server](windows-server/README.md)
 - [Ubuntu Server 24.04 LTS](linux/ubuntu-24.04/README.md)
@@ -32,7 +32,7 @@ I am still learning different platforms and releases. If a command does not work
 - [Infrastructure design references](design/README.md)
 - [Server operations case studies](case-studies/README.md)
 
-## A look at the lab layout
+## Example lab layout
 
 ```text
                  Admin workstation
@@ -89,5 +89,12 @@ See the [server operations case studies](case-studies/README.md) for example wor
 ## Before using an example
 
 These pages are references for controlled labs or sanitized documentation. Review commands for your own environment before running them. Do not publish production credentials, private keys, public IPs, internal domain names, customer data or confidential topology.
+
+## Related portfolios
+
+- [Network Engineering](https://github.com/thnayem/network-engineering-portfolio)
+- [Enterprise IT Operations](https://github.com/thnayem/enterprise-it-operations-portfolio)
+- [GitHub profile](https://github.com/thnayem)
+- [LinkedIn](https://www.linkedin.com/in/thnayem/)
 
 Maintained by [Md. Tanvir Hossain](https://github.com/thnayem) · [LinkedIn](https://www.linkedin.com/in/thnayem/)
