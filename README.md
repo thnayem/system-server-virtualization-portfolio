@@ -3,11 +3,11 @@
 **Md. Tanvir Hossain**  
 System Administration | Windows & Linux | Virtualization
 
-This is where I keep notes about the server side of my work and the things I am learning: Windows Server, Linux, VMware, virtual machines, storage, backup, maintenance and troubleshooting.
+This repository brings together practical notes on Windows Server, Linux, VMware, virtual machines, storage, backup, maintenance and troubleshooting. It reflects a mix of production experience, sanitized references and independent lab work.
 
-I have worked with live production servers and infrastructure, but I do not publish copies of those environments. Company hostnames, IP plans, backups, credentials and internal details need to stay private. The pages here are a mixture of practical notes, sanitized references and independent lab examples. Where something is a lab exercise, I say so.
+I keep company hostnames, IP plans, backups, credentials and internal details private. If a procedure has not been tested on the stated platform, I do not present it as verified.
 
-Some of these notes started with a problem I needed to understand. Others came from building a lab or reading about a feature I had not used before. I keep the useful commands and checks so I can return to them later. If a step has not been tested on the stated platform, I do not describe it as verified.
+![Illustrative server and virtualization overview](./docs/server-platform-overview.svg)
 
 ## What I cover
 
@@ -31,24 +31,6 @@ Some of these notes started with a problem I needed to understand. Others came f
 - [Operations and maintenance](operations/README.md)
 - [Infrastructure design references](design/README.md)
 - [Server operations case studies](case-studies/README.md)
-
-## A simple lab layout
-
-```text
-                 Admin workstation
-                        |
-                 Management network
-                        |
-                VMware ESXi host
-                 /      |       \
-          Datastore  vSwitch   Physical NICs
-                 |      |
-          Virtual machines
-           /      |       \
-     Windows   Ubuntu    Service VMs
-      Server   Server   (DNS/Web/Monitoring/
-                        Backup/Utility)
-```
 
 ## How I approach server work
 
@@ -77,13 +59,6 @@ The scripts and configuration examples are starting points for learning and cont
 - [GitHub profile](https://github.com/thnayem)
 - [LinkedIn](https://www.linkedin.com/in/thnayem/)
 
-Maintained by [Md. Tanvir Hossain](https://github.com/thnayem) · [LinkedIn](https://www.linkedin.com/in/thnayem/)
+## Authorship
 
-
-## Authorship, AI assistance and real-world work
-
-The technical work documented here is my own. The decisions, hands-on work, troubleshooting, lab activities, implementation experience and production-related context come from my real work and learning. I do not use AI to invent configurations, incidents, technical results, deployment history or experience claims.
-
-I have used AI assistance in a limited editorial role for some template-style wording, sentence structure and phrasing, and to help organize formal or licensing-related disclaimers and documentation layouts. That assistance does not make the underlying technical work, decisions, lab activity or production experience AI-generated. I remain responsible for the accuracy of what I publish, and I try to distinguish clearly between work I handled in production, sanitized references, and examples I built or tested in a lab.
-
-Some pages use familiar ITSM, ITIL or other framework terminology where it helps explain a process or meet a documentation need. Those references are organizational language, not a claim that every framework was formally adopted or followed in a particular workplace. I prefer practical evidence and honest context over textbook wording or claims that sound impressive but cannot be backed up.
+The technical work and experience described here are mine. I sometimes use AI to edit wording or organize documentation, but not to replace hands-on work or technical judgement. I review what I publish and take responsibility for it.
