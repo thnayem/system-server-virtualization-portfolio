@@ -40,3 +40,7 @@ Enable remoting only after applying the organization's authentication, certifica
 ## BMC vs Windows management
 
 RDP/WinRM manage the operating system. iDRAC/iLO/IPMI manages the physical server independently of Windows. Keep these credentials and network paths separate. Use BMC console access for OS boot/recovery when the network stack or Windows itself is down.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
