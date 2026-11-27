@@ -54,3 +54,7 @@ Use a maintenance window, evacuate workloads where possible, confirm backup and 
 - [iDRAC, iLO and IPMI setup and operations](idrac-ilo-ipmi-out-of-band.md)
 
 Keep the BMC/iDRAC/iLO management plane separate from ESXi and guest networks. Restrict access to authorized administrators and document the recovery path.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
