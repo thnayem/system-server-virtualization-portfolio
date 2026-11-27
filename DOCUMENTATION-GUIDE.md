@@ -57,3 +57,7 @@ Change the diagram to match the system being described. Do not add components th
 Commands that change partitions, filesystems, firewall rules, permissions, services or storage need pre-checks and a recovery plan. Do not suggest turning off security controls as the first troubleshooting step.
 
 Keep passwords, private keys, recovery codes, internal hostnames/IPs, serial numbers, user data and employer logs out of public pages. If an example has not been tested, say so.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
