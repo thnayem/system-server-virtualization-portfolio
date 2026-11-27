@@ -3,11 +3,11 @@
 **Md. Tanvir Hossain**  
 System & Network Administrator | IT Infrastructure & Operations
 
-This repository contains notes and examples from the system administration side of my work: Windows Server, Linux, VMware, virtual machines, storage, backup, maintenance and troubleshooting.
+This is where I keep notes from the server side of my work and learning: Windows Server, Linux, VMware, virtual machines, storage, backup, maintenance and troubleshooting. Some pages started because I needed to understand a problem at work; others came from lab practice or reading and testing something new.
 
-I have supported and maintained live production servers and infrastructure, but this repository is not a copy of those environments. Company configurations, server backups, credentials, private hostnames and internal network details do not belong in a public repository. What I share here is a mix of study notes, sanitized references, independent lab examples and lessons from practical work. A lab procedure should not be read as proof that the same procedure was deployed unchanged in production.
+I have supported and maintained live production servers and infrastructure, but this repository is not a copy of those environments. Company configurations, server backups, credentials, private hostnames and internal network details do not belong in a public repository. What I share is a mix of study notes, sanitized references, independent lab examples and lessons from practical work. A lab procedure should not be read as proof that the same procedure was deployed unchanged in production.
 
-I am still learning different platforms and releases. If a command does not work as expected, I check the version, read the relevant documentation, test a safer approach and record what I find. I would rather be clear about what I have tested than label every example as verified.
+I am still learning different platforms and releases. A command can fail because the version is different, a dependency is missing or I have misunderstood the setup. When that happens, I go back to the logs and documentation, test a safer approach and keep the useful lesson. I would rather be clear about what I have tested than label every example as verified.
 
 ## What this repository covers
 
