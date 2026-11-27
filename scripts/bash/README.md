@@ -30,3 +30,7 @@ journalctl -p warning -b --no-pager | tail -n 100
 ```
 
 Package updates should be handled through the system's normal change and maintenance process. Review command output before sharing it; it can contain host and network details.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
