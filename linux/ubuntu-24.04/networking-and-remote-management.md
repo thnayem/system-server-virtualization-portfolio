@@ -39,3 +39,7 @@ sudo systemctl status ssh --no-pager
 ## Remote console distinction
 
 SSH is guest OS access. BMC/iDRAC/iLO/IPMI is independent physical hardware access and can remain available even if Ubuntu is not booting, provided the server and BMC have power/network connectivity. Keep the BMC interface on a restricted management segment and never publish its address or credentials.
+
+---
+
+**A note on this documentation:** The technical work and experience behind these notes are mine. Some wording and the way I have organized the material have had AI assistance, mainly to make the writing clearer and save time. The examples, decisions and work described are not AI-generated. I check what I publish and stand behind it.
