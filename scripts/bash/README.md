@@ -1,10 +1,18 @@
 # Bash Administration Examples
 
-Examples are read-only diagnostics unless stated. Review commands before use.
+[server-inventory.sh](server-inventory.sh) gathers a first-pass Linux host inventory. It reads system information and does not change configuration.
 
-## Host, network and storage inventory
+Run it with:
+
 ```bash
-hostnamectl
+bash server-inventory.sh
+```
+
+The script uses common tools such as `hostnamectl`, `ip`, `ss`, `lsblk`, `df`, `free` and `systemctl`. If an optional tool is missing, the script skips that check or reports it.
+
+## Useful commands
+
+```bash
 ip -br address
 ip route
 ss -tulpn
@@ -12,17 +20,13 @@ lsblk -f
 df -hT
 free -h
 uptime
+systemctl --failed
 ```
 
-## Recent warnings and failed units
+For recent warnings:
+
 ```bash
-systemctl --failed
 journalctl -p warning -b --no-pager | tail -n 100
 ```
 
-## Package maintenance
-```bash
-sudo apt update
-apt list --upgradable
-```
-Apply upgrades only under your change and maintenance policy. Keep secrets out of scripts and repository history.
+Package updates should be handled through the system's normal change and maintenance process. Review command output before sharing it; it can contain host and network details.
