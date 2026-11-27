@@ -27,6 +27,7 @@ A practical, documentation-first portfolio covering Windows Server, Ubuntu Serve
 - [Bash examples](scripts/bash/README.md)
 - [Operations and maintenance](operations/README.md)
 - [Infrastructure design references](design/README.md)
+- [Server operations case studies](case-studies/README.md) - VM service outage, Linux capacity, SMB access, backup restore readiness, and incident workflows
 
 ## Lab architecture
 
