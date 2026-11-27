@@ -32,6 +32,15 @@ I keep company hostnames, IP plans, backups, credentials and internal details pr
 - [Infrastructure design references](design/README.md)
 - [Server operations case studies](case-studies/README.md)
 
+## Practical administration scripts
+
+There are two small inventory scripts in this repository:
+
+- [PowerShell server inventory](scripts/powershell/Get-ServerInventory.ps1) collects Windows host, adapter, IP, volume and service information. It is read-only.
+- [Bash server inventory](scripts/bash/server-inventory.sh) collects Linux host, network, storage, memory and systemd information. It is read-only.
+
+They are useful for a first look during troubleshooting or documentation. They are not a full monitoring or auditing solution. Review the output before sharing it because it may contain host and network details. Test scripts in a suitable environment before using them on production systems.
+
 ## How I approach server work
 
 Before installing or changing a server, I check what it needs to run: compute, memory, storage, network, DNS, time synchronization, access and backup. I also look at how it will be monitored and how it can be recovered if something goes wrong.
